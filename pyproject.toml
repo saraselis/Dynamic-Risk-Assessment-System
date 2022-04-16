@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "Dynamic Risk Assessment System"
+version = "0.1.0"
+description = ""
+authors = ["saraselis <saras1@hotmail.com.br>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "7.1.2"
+cycler = "0.10.0"
+Flask = "1.1.2"
+gunicorn = "20.0.4"
+itsdangerous = "1.1.0"
+Jinja2 = "2.11.3"
+joblib = "^1.1.0"
+kiwisolver = "^1.4.2"
+MarkupSafe = "^2.1.1"
+matplotlib = "^3.5.1"
+numpy = "^1.22.3"
+pandas = "^1.4.2"
+Pillow = "^9.1.0"
+pyparsing = "^3.0.8"
+python-dateutil = "^2.8.2"
+pytz = "^2022.1"
+seaborn = "^0.11.2"
+six = "^1.16.0"
+scikit-learn = "^1.0.2"
+threadpoolctl = "^3.1.0"
+Werkzeug = "^2.1.1"
+pip-outdated = "^0.5.0"
+reportlab = "^3.6.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
