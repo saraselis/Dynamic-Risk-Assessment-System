@@ -166,7 +166,7 @@ if __name__ == '__main__':
 
     logging.info(f"Execution time: {json.dumps(execution_time(), indent=4)}")
 
-    # logging.info("Outdated Packages")
-    # dependencies = outdated_packages_list()
-    # for row in dependencies:
-    #     logging.info('f deps: {:<20}{:<10}{:<10}{:<10}'.format(*row))
+    logging.info("Outdated Packages")
+    dependencies = outdated_packages_list()
+    for row in dependencies:
+        logging.info('f deps: {:<20}{:<10}{:<10}{:<10}'.format(*row))
