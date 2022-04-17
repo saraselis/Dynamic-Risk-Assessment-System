@@ -1,0 +1,2 @@
+# comando cronjob
+10 * * * * python3 src/app.py && python src/fullprocess.py
