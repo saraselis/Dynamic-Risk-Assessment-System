@@ -4,6 +4,7 @@ import pandas as pd
 import sys
 
 from datetime import datetime
+from icecream import ic
 
 from config import DATA_PATH, INPUT_FOLDER_PATH
 
@@ -12,10 +13,9 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
 
 def merge_multiple_dataframe():
-    """
-    Function for data ingestion. Check for datasets, combine them together,
-    drops duplicates and write metadata ingestedfiles.txt and ingested data
-    to finaldata.csv
+    """Function for ingesting data. Checks datasets,
+        combines them, discards duplicates and writes
+        metadata to ingestedfiles.txt and managed data to finaldata.csv
     """
 
     df = pd.DataFrame()
@@ -24,10 +24,14 @@ def merge_multiple_dataframe():
     logging.info(f"Reading files from: {INPUT_FOLDER_PATH}.")
 
     for file in os.listdir(INPUT_FOLDER_PATH):
+        ic(file)
+        ic(INPUT_FOLDER_PATH)
         file_path = os.path.join(INPUT_FOLDER_PATH, file)
         df_tmp = pd.read_csv(file_path)
+        ic(df_tmp)
 
         file = os.path.join(*file_path.split(os.path.sep)[-3:])
+        ic(file)
         file_names.append(file)
 
         df = df.append(df_tmp, ignore_index=True)
